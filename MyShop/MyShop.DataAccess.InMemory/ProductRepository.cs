@@ -63,7 +63,7 @@ namespace MyShop.DataAccess.InMemory
 
         public IQueryable<Product> Collection()
         {
-            return products.AsQueryable;
+            return products.AsQueryable();
         }
 
         public void Delete(string Id)
@@ -72,7 +72,7 @@ namespace MyShop.DataAccess.InMemory
 
             if (productToDelete != null)
             {
-                products.Remove(productToDelete)
+                products.Remove(productToDelete);
             }
             else
             {
